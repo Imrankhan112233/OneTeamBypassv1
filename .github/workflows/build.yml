@@ -175,10 +175,11 @@ jobs:
         com.deephat.oneteambypass.XposedInit
         EOF
 
-    - name: Build APK with Gradle
-      run: |
-        gradle wrapper --gradle-version=8.2
-        ./gradlew assembleDebug
+    - name: Generate Gradle Wrapper with Gradle 8.0
+      run: gradle wrapper --gradle-version=8.0
+
+    - name: Build APK with Gradle Wrapper
+      run: ./gradlew assembleDebug
 
     - name: Upload APK Artifact
       uses: actions/upload-artifact@v4
