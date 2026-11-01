@@ -64,7 +64,6 @@ jobs:
         }
         dependencies {
             compileOnly 'de.robv.android:xposedbridge:82'
-            implementation 'com.facebook.react:react-native:0.73.0'
         }
         EOF
 
